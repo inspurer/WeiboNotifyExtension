@@ -1,0 +1,38 @@
+{
+	"manifest_version": 2,
+	"name": "New Weibo Notify",
+	"version": "1.0.0",
+	"description": "新微博通知助手，无状态低配置第一时间获取最新关注微博",
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"background":
+	{
+		"scripts": ["background.js"]
+	},
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "新微博通知助手",
+		"default_popup": "popup.html"
+	},
+	"permissions":
+	[
+		"activeTab",
+		"notifications",
+		"storage",
+		"https://api.weibo.cn/*",
+		"https://*.sinaimg.cn/*"
+	],
+	"homepage_url": "https://github.com/inspurer",
+	"options_page": "options.html",
+	"options_ui":
+	{
+		"page": "popup.html",
+		"chrome_style": true
+	},
+	"omnibox": { "keyword" : "new_weibo" }
+}
